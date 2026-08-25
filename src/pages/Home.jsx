@@ -72,7 +72,7 @@ const Home = () => {
  
         </div>
       <footer>
-        <h4>Built with💛by <a href='https://github.com/Shewe666'>S&V</a></h4>
+        <h4>Built with💛by <a href='https://github.com/Shewe666/CoDev'>S&V</a></h4>
       </footer>
 
     </div>
