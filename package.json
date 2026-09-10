@@ -7,15 +7,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server:dev": "nodemon server.js",
+    "server:prod": "node server.js"
   },
   "dependencies": {
     "codemirror": "^5.65.21",
+    "express": "^5.2.1",
     "react": "^19.2.8",
     "react-avatar": "^5.0.4",
     "react-dom": "^19.2.8",
     "react-hot-toast": "^2.6.0",
     "react-router-dom": "^7.18.2",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
     "uuid": "^14.0.2"
   },
   "devDependencies": {
@@ -30,6 +35,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
+    "nodemon": "^3.1.14",
     "vite": "^8.2.0"
   }
 }
