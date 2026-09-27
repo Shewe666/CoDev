@@ -4,18 +4,32 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import JoinRoom from './pages/JoinRoom'
 import EditorPage from './pages/EditorPage'
-
-
+import Login from './pages/Login'
+import Register from './pages/Register'
+import ProtectedRoute from './Components/ProtectedRoute'
 
 const App = () => {
   return (
-  <>
-  <Routes>
-    <Route path="/" element={<Home />}></Route>
-      <Route path="/join" element={<JoinRoom />}></Route>
-      <Route path="/editor/:roomId" element={<EditorPage />}></Route>
-  </Routes>
-  </>
+    <>
+      <Routes>
+        {/* Public routes */}
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+        {/* Protected routes - require login */}
+        <Route path="/join" element={
+          <ProtectedRoute>
+            <JoinRoom />
+          </ProtectedRoute>
+        } />
+        <Route path="/editor/:roomId" element={
+          <ProtectedRoute>
+            <EditorPage />
+          </ProtectedRoute>
+        } />
+      </Routes>
+    </>
   )
 }
 

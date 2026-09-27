@@ -8,12 +8,19 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server:dev": "nodemon server.js",
-    "server:prod": "node server.js"
+    "server:dev": "nodemon server/server.js",
+    "server:prod": "node server/server.js"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "bcryptjs": "^3.0.3",
     "codemirror": "^5.65.21",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.1",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "monaco-editor": "^0.56.0",
+    "mongoose": "^9.10.1",
     "react": "^19.2.8",
     "react-avatar": "^5.0.4",
     "react-dom": "^19.2.8",

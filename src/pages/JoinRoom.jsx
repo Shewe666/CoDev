@@ -6,7 +6,10 @@ import { useNavigate } from 'react-router-dom';
 const JoinRoom = () => {
   const navigate = useNavigate();
   const [roomId , setRoomId]= useState(''); 
-  const [username,setUsername]= useState('');
+  const [username, setUsername] = useState(() => {
+    const savedUser = JSON.parse(localStorage.getItem('user') || '{}');
+    return savedUser.name || localStorage.getItem('username') || '';
+  });
 
   //function for uid..
    const createNewRoom=(e)=>{
@@ -68,6 +71,27 @@ const JoinRoom = () => {
                  <span className='createInfo'>If you don't have an invite than create &nbsp;
                   <a  onClick={createNewRoom} href='' className='createNewBtn' >new room</a>
                  </span>
+                 <div style={{ marginTop: '14px', textAlign: 'center' }}>
+                   <button
+                     onClick={() => {
+                       localStorage.removeItem('token');
+                       localStorage.removeItem('user');
+                       localStorage.removeItem('username');
+                       toast.success('Logged out successfully');
+                       navigate('/login');
+                     }}
+                     style={{
+                       background: 'transparent',
+                       border: 'none',
+                       color: '#ff4b4b',
+                       cursor: 'pointer',
+                       fontSize: '13px',
+                       textDecoration: 'underline'
+                     }}
+                   >
+                     Logout
+                   </button>
+                 </div>
             </div>
  
         </div>

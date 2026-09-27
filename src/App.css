@@ -8,21 +8,19 @@
 .logo{
   height: 80px;
   margin-bottom: 30px;
-  /* width: 200px; */
 }
 .formWrapper{
   background: #282a36;
   padding: 20px;
   border-radius: 10px;
   width: 400px;
- max-width: 90%; /*  to make it responsive  */
+ max-width: 90%;
 }
 footer{
   position: fixed;
   bottom: 0;
 }
 footer a{  
-/* footer's link we are styling */
 color: #4aee88
 } 
 .inputGroup{
@@ -52,20 +50,17 @@ font-weight: bold ;
   cursor: pointer ;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
-
-
 }
 .joinBtn{
 background:#4aed88 ;
 width: 100px;
 margin-left: auto;
-
 }
 .joinBtn:hover{
   background: #2b824c;
 }
 .createInfo{
-  margin:0 auto;  /* with this we are placing the text in the center  */
+  margin:0 auto;
   margin-top: 20px; 
 }
 .createNewBtn{
@@ -73,16 +68,17 @@ margin-left: auto;
   text-decoration: none;
   border-bottom: 1px solid #4aed88;
 }
-/* if we have to give two things the same property we will use , */
 .createNewBtn:hover , footer a:hover{
  color:#368654;
  border-color: #368654;
-
 }
+
+/* Editor page layout - 3 columns: sidebar | editor | chat */
 .mainWrap{
   display: grid;
-  grid-template-columns: 230px 1fr;
-  /* height:100vh; */
+  grid-template-columns: 220px 1fr 260px;
+  height: 100vh;
+  overflow: hidden;
 }
 .aside{
   background: #1c1e29;
@@ -90,6 +86,7 @@ margin-left: auto;
   color:#fff;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 .asideInner{
   flex: 1;
@@ -99,6 +96,7 @@ margin-left: auto;
   align-items: center;
   flex-wrap: wrap;
   gap:20px;
+  margin-top: 12px;
 }
 .client{
   display: flex;
@@ -108,26 +106,112 @@ margin-left: auto;
 }
 .userName{
   margin-top: 10px;
+  font-size: 13px;
+  word-break: break-all;
 }
 
 .logoImg{
   height: 80px;
   border-bottom: 1px solid #424242;
   padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+/* Sidebar buttons */
+.copyBtn{
+  background: #4aed88;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.copyBtn:hover{
+  background: #2b824c;
 }
 .leaveBtn{
-  margin-top: 20px;
-  background: #4aed88;
-
-
+  background: #e05260;
+  width: 100%;
+  color: white;
 }
 .leaveBtn:hover{
-  background:#2b824c;
+  background: #b33d48;
 }
-.CodeMirror{
 
-min-height: calc(100vh - 20px);   /* -20px to prevent scroll */
-font-size: 20px;
-line-height: 1.6;
-padding-top: 20px;
+/* Editor area */
+.editorWrap{
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Chat panel */
+.chatWrap{
+  background: #1c1e29;
+  border-left: 1px solid #2a2c3a;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.chatHeader{
+  color: #fff;
+  font-weight: bold;
+  padding: 14px 16px;
+  border-bottom: 1px solid #2a2c3a;
+  font-size: 14px;
+}
+.chatBox{
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chatMessage{
+  background: #282a36;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #f8f8f2;
+  font-size: 13px;
+  word-break: break-word;
+}
+.chatMessage strong{
+  color: #4aed88;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+.chatInputRow{
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid #2a2c3a;
+}
+.chatInput{
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #3a3c4a;
+  background: #282a36;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+.chatInput:focus{
+  border-color: #4aed88;
+}
+.sendBtn{
+  background: #4aed88;
+  color: #1c1e29;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+.sendBtn:hover{
+  background: #2b824c;
+}
+
+/* Legacy CodeMirror style kept for reference */
+.CodeMirror{
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
 }

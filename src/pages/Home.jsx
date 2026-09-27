@@ -15,6 +15,7 @@ const Home = () => {
           <a href="#features">Features</a>
           <a href="#how-it-works">How It Works</a>
           <a href="#contact">Contact</a>
+          <a href="/login" style={{color:'#4aed88', fontWeight:'bold'}}>Login</a>
         </div>
       </nav>
 
@@ -36,7 +37,7 @@ const Home = () => {
             the Room ID with your team, and start coding together instantly.
           </p>
 
-          <button className='btn startBtn' onClick={() => navigate('/join')}>
+          <button className='btn startBtn' onClick={() => navigate('/login')}>
             Start Coding <span>→</span>
           </button>
         </div>
