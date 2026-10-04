@@ -128,38 +128,6 @@ The project is being developed as a **MERN Stack application** with **Socket.IO*
        └────────────────┘
 ```
 
----
-
-## 📂 Planned Project Structure
-
-```text
-CoDev/
-│
-├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── styles/
-│   │   ├── assets/
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   │
-│   └── package.json
-│
-├── server/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── sockets/
-│   ├── server.js
-│   └── package.json
-│
-└── README.md
-```
-
----
-
 ## 🔄 Application Workflow
 
 ```text
@@ -231,14 +199,6 @@ The platform can be extended with:
 * Screen sharing
 * Voice communication
 * Collaborative whiteboard
-
----
-
-## 🎓 Project Status
-
-**Current Stage:** Frontend / UI Development
-
-The initial interface and application structure are being developed. Backend services, database integration, authentication, and real-time collaboration will be implemented in subsequent development phases.
 
 ---
 
